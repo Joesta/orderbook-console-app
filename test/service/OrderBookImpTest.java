@@ -17,7 +17,7 @@ public class OrderBookImpTest {
     private LinkedList<Order> orders;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         System.out.println("Entering method: setup()");
         orderBookImp = new OrderBookImp();
         order = OrderBuilder.buildOrder(1);
@@ -27,7 +27,7 @@ public class OrderBookImpTest {
                 .addAll(orders);
     }
 
-    public void tearDown() throws Exception {
+    public void tearDown() {
         orderBookImp = null;
         order = null;
         orders.clear();
